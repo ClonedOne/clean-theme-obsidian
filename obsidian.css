@@ -21,15 +21,37 @@
   color: var(--text-faint);
 }
 
+/* Sidedocks icons */
+.side-dock-ribbon-tab, .side-dock-ribbon-action {
+  color: var(--text-muted);
+}
+.side-dock-ribbon-tab:hover, .side-dock-ribbon-action:hover {
+  color: var(--text-normal);
+}
+
 
 /* Markdown syntax highlighting */
-/* Header hashes */
+/* Headers */
 .cm-formatting-header {
-  color: var(--markdown-header-hash) !important;
+  color: var(--text-faint) !important;
+  font-weight: 200 !important;
+}
+.HyperMD-header-1 {
+  font-size: 18pt !important;
+}
+.HyperMD-header-2 {
+  font-size: 16pt !important;
+}
+.HyperMD-header-3 {
+  font-size: 14pt !important;
 }
 /* Lists */
 .cm-formatting-list {
-  color: var(--markdown-list) !important;
+  color: var(--text-faint) !important;
+}
+/* Quote */
+.cm-formatting-quote {
+  color: var(--text-faint) !important;
 }
 
 
