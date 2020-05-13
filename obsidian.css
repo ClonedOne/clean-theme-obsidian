@@ -1,7 +1,7 @@
 /* Custom font */
 /* Comment this out if you don't have iA Writer Duospace installed */
 .cm-s-obsidian {
-  font-family: "iA Writer Duospace";
+  font-family: 'iAWriterDuospace-Regular', 'iA Writer Duospace', 'Source Code Pro', 'Microsoft YaHei Light', monospace;
 }
 
 /* Collapsing sidedocks */
