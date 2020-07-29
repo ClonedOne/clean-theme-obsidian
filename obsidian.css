@@ -1,12 +1,26 @@
+html, body {
+  overflow-x: hidden;
+}
+
 /* Collapsing sidedocks */
-.app-container.is-left-sidedock-collapsed .side-dock.mod-left:not(:hover), .app-container.is-right-sidedock-collapsed .side-dock.mod-right:not(:hover) {
-  width: 0px !important;
+.side-dock-ribbon.mod-left.is-collapsed:not(:hover), .side-dock-ribbon.mod-right.is-collapsed:not(:hover) {
+  width: 5px !important;
+  opacity: 0;
+}
+.side-dock-ribbon {
+  transition-property: width, opacity;
+}
+
+/* No borders on sidebar */
+.side-dock-ribbon.mod-right, .side-dock-ribbon.mod-left {
+  border: 0px;
 }
 
 /* Clean header */
-.workspace-leaf-header, .view-header {
+.workspace-leaf.mod-active .view-header {
   background-color: var(--background-primary) !important;
   border-bottom: 0px !important;
+  border-top: 0px !important;
 }
 
 /* Cleaner status bar */
