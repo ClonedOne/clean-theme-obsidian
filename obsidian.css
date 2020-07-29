@@ -45,6 +45,21 @@ html, body {
   margin: 0px 10% !important;
 }
 
+/* Pretty link hover animations */
+.cm-hmd-internal-link, a {
+  transition: filter 200ms ease-out;
+  text-decoration: none !important;
+}
+.cm-hmd-internal-link:hover, a:hover {
+  filter: brightness(70%);
+  text-decoration: none !important;
+}
+
+/* Remove border from status bar */
+.status-bar {
+  border: none !important;
+}
+
 
 /* Markdown syntax highlighting */
 /* Headers */
@@ -90,6 +105,7 @@ html, body {
   --quote-opening-modifier: rgb(255, 255, 255, 0.1);
 
   --text-normal: #dedcde;
+  --text-faint: #dedcde44;
   --text-accent:  #94a8b3;
   --text-accent-hover: #83959e;
 }
