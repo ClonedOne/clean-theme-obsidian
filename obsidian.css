@@ -73,6 +73,11 @@ a.internal-link:hover {
   margin: 0;
 }
 
+/* No overflow scrollbar in x-direction */
+.nav-files-container {
+  overflow-x: hidden;
+}
+
 
 /* Markdown syntax highlighting */
 /* ---------------------------- */
