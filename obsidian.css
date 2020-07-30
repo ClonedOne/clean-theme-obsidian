@@ -29,14 +29,6 @@ html, body {
   color: var(--text-faint);
 }
 
-/* Sidedocks icons */
-.side-dock-ribbon-tab, .side-dock-ribbon-action {
-  color: var(--text-muted);
-}
-.side-dock-ribbon-tab:hover, .side-dock-ribbon-action:hover {
-  color: var(--text-normal);
-}
-
 /* Bigger margins when single pane */
 .mod-single-child .CodeMirror-sizer {
   margin: 0px 10% !important;
@@ -46,11 +38,12 @@ html, body {
 }
 
 /* Pretty link hover animations */
-.cm-hmd-internal-link, a {
+.cm-hmd-internal-link, a.external-link, a.internal-link {
   transition: filter 200ms ease-out;
   text-decoration: none !important;
 }
-.cm-hmd-internal-link:hover, a:hover {
+.cm-hmd-internal-link:hover, a.external-link:hover,
+a.internal-link:hover {
   filter: brightness(70%);
   text-decoration: none !important;
 }
@@ -60,8 +53,29 @@ html, body {
   border: none !important;
 }
 
+/* Fainter icons, bringing focus to the text area */
+.view-action, .view-header-icon, .side-dock-ribbon-action,
+.nav-action-button, .workspace-tab-header-inner-icon {
+  color: var(--text-faint);
+  transition: color 200ms ease-in;
+}
+
+/* Same hovering accent color on every icon */
+.side-dock-ribbon-action:hover, .workspace-tab-header:hover .workspace-tab-header-inner-icon,
+.workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.workspace-ribbon-collapse-btn:hover, .view-header-icon:hover {
+  color: var(--text-accent);
+}
+
+/* Side-bars do not have margins that restrict the content */
+.workspace-split.mod-right-split[style="width: 0px;"],
+.workspace-split.mod-left-split[style="width: 0px;"] {
+  margin: 0;
+}
+
 
 /* Markdown syntax highlighting */
+/* ---------------------------- */
 /* Headers */
 .cm-formatting-header {
   color: var(--text-faint) !important;
@@ -104,10 +118,18 @@ html, body {
   --background-modifier-accent: #94a8b328;
   --quote-opening-modifier: rgb(255, 255, 255, 0.1);
 
-  --text-normal: #dedcde;
-  --text-faint: #dedcde44;
-  --text-accent:  #94a8b3;
-  --text-accent-hover: #83959e;
+  /* Text */
+  --text: 222, 220, 222;
+  --text-normal: rgb(var(--text));
+  --text-faint: rgba(var(--text), 0.3);
+
+  /* Accent */
+  --accent: 148, 168, 179;
+  --text-accent: rgb(var(--accent));
+  --text-accent-hover: rgba(var(--accent), 0.8);
+  --interactive-accent: rgba(var(--accent), 0.6);
+  --interactive-accent-rgb: var(--accent);
+  --interactive-accent-hover: rgba(var(--accent), 0.5);
 }
 
 .theme-light {
