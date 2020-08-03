@@ -1,14 +1,61 @@
+@import url('file:///home/kmaasrud/.cache/wal/colors.css');
+
+/* Custom colors */
+/* ------------- */
+.theme-dark {
+  --background-primary: #000;
+  --background-secondary: #000;
+  --background-modifier-accent: #94a8b328;
+  --quote-opening-modifier: rgb(255, 255, 255, 0.1);
+
+  /* Text */
+  --text: 222, 220, 222;
+  --text-normal: rgb(var(--text));
+  --text-faint: rgba(var(--text), 0.3);
+
+  /* Accent */
+  --accent: 148, 168, 179;
+  --text-accent: rgb(var(--accent));
+  --text-accent-hover: rgba(var(--accent), 0.8);
+  --interactive-accent: rgba(var(--accent), 0.6);
+  --interactive-accent-rgb: var(--accent);
+  --interactive-accent-hover: rgba(var(--accent), 0.5);
+}
+
+.theme-light {
+  --background-modifier-accent: #6b8c9c1e;
+  --quote-opening-modifier: rgb(0, 0, 0, 0.1);
+
+  --text-accent:  #6b8c9c;
+  --text-accent-hover: #81a7b9;
+}
+
+/* Other variables */
+/* --------------- */
+:root {
+  --transition-length: 200ms;
+}
+
+
+/* Styling of content */
+/* ------------------ */
 html, body {
   overflow-x: hidden;
 }
 
 /* Collapsing sidedocks */
 .side-dock-ribbon.mod-left.is-collapsed:not(:hover), .side-dock-ribbon.mod-right.is-collapsed:not(:hover) {
-  width: 5px !important;
+  width: 15px !important;
   opacity: 0;
 }
 .side-dock-ribbon {
   transition-property: width, opacity;
+}
+
+/* Fading header icons (MINIMAL EVERYTHING!!!) */
+.view-header:not(:hover) .view-actions, .view-header:not(:hover) .view-header-icon {
+  opacity: 0;
+  transition: opacity var(--transition-length) ease-in-out;
 }
 
 /* No borders on sidebar */
@@ -30,6 +77,7 @@ html, body {
 }
 
 /* Bigger margins when single pane */
+/* I think this is rendered redundant with the current version */
 .mod-single-child .CodeMirror-sizer {
   margin: 0px 10% !important;
 }
@@ -39,7 +87,7 @@ html, body {
 
 /* Pretty link hover animations */
 .cm-hmd-internal-link, a.external-link, a.internal-link {
-  transition: filter 200ms ease-out;
+  transition: filter var(--transition-length) ease-out;
   text-decoration: none !important;
 }
 .cm-hmd-internal-link:hover, a.external-link:hover,
@@ -57,7 +105,7 @@ a.internal-link:hover {
 .view-action, .view-header-icon, .side-dock-ribbon-action,
 .nav-action-button, .workspace-tab-header-inner-icon {
   color: var(--text-faint);
-  transition: color 200ms ease-in;
+  transition: color var(--transition-length) ease-in;
 }
 
 /* Same hovering accent color on every icon */
@@ -76,6 +124,11 @@ a.internal-link:hover {
 /* No overflow scrollbar in x-direction */
 .nav-files-container {
   overflow-x: hidden;
+}
+
+/* Transparent ribbons (works better with the auto-hiding) */
+.workspace-ribbon.is-collapsed {
+  background: transparent;
 }
 
 
@@ -155,32 +208,3 @@ a.internal-link:hover {
 }
 
 
-/* --------------- */
-/* Custom colors */
-.theme-dark {
-  --background-primary: #000;
-  --background-secondary: #000;
-  --background-modifier-accent: #94a8b328;
-  --quote-opening-modifier: rgb(255, 255, 255, 0.1);
-
-  /* Text */
-  --text: 222, 220, 222;
-  --text-normal: rgb(var(--text));
-  --text-faint: rgba(var(--text), 0.3);
-
-  /* Accent */
-  --accent: 148, 168, 179;
-  --text-accent: rgb(var(--accent));
-  --text-accent-hover: rgba(var(--accent), 0.8);
-  --interactive-accent: rgba(var(--accent), 0.6);
-  --interactive-accent-rgb: var(--accent);
-  --interactive-accent-hover: rgba(var(--accent), 0.5);
-}
-
-.theme-light {
-  --background-modifier-accent: #6b8c9c1e;
-  --quote-opening-modifier: rgb(0, 0, 0, 0.1);
-
-  --text-accent:  #6b8c9c;
-  --text-accent-hover: #81a7b9;
-}
