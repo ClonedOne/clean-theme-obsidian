@@ -4,11 +4,20 @@
 
 A minimal and clean theme designed to be clutter-free and easy on the eye. Supports both dark and light mode.
 
-### Features
+## Features
 
 - Clean colors
 
-    Simple, neutral and close to monochrome.
+    Simple, neutral and close to monochrome, prioritizing high contrast where important.
+	
+	- [ ] Support for [pywal](https://github.com/dylanaraps/pywal)-generated colors
+
+- UI cleanup
+
+	Your content is the most important thing, and should be front and center. This theme hides as much unecessary UI as possible, only showing it when needed. 
+	
+	- The sidebars are hidden, and are shown by hovering to either side. Personally, I prefer using hotkeys to toggle them, which gives me a focused and effective workflow. This is supported by the theme.
+	- Header icons (Drag to rearrange, Show preview, etc.) are hidden. These need only be visible when interacting with them, and are thus shown by hovering a header.
 
 - Dark mode
 
@@ -16,23 +25,14 @@ A minimal and clean theme designed to be clutter-free and easy on the eye. Suppo
 
 - Light mode
 
-    ![](media/light_shadow.png)
-
-- Autohide sidedocks
-
-    This theme has auto-hiding sidedocks. Just bring your cursor over to one of the sides to show them (currently, this feature makes windowed use pretty hard, so go maximized).
-
-- Source and preview padding
-
-    When only a single pane is open, the content is slightly padded, making reading easier.
+	Should work, but not actively supported yet.
 
 ## Installation
 
-1. Download the `obsidian.css` file.
-2. Put `obsidian.css` in your vault directory.
-3. Go to Obsidian's settings and make sure you have the Custom CSS plugin enabled.
-4. Enjoy!
+1. Enable Custom CSS plugin in settings
+2. Find "Clean Theme by kmaasrud" in Community Themes
+3. Press use
 
 ---
 
-Supports v0.5.1
+Supports v0.8.1
