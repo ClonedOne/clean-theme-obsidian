@@ -35,4 +35,4 @@ A minimal and clean theme designed to be clutter-free and easy on the eye. Suppo
 
 ---
 
-Supports v0.8.1
+Supports v0.9.2
