@@ -30,8 +30,7 @@
 }
 
 ::selection, .CodeMirror-selected, .CodeMirror-selectedtext {
-  background: var(--text-normal) !important;
-  color: var(--background-primary) !important;
+  color: var(--interactive-accent) !important;
 }
 
 h1,h2,h3,h4,h5,strong {font-weight:var(--bold-weight);}
@@ -50,7 +49,7 @@ body, input, button, .cm-s-obsidian .cm-formatting-hashtag, .cm-s-obsidian {
 .cm-s-obsidian .cm-header, .cm-s-obsidian .cm-strong {
   font-weight:var(--bold-weight);
 }
-.cm-formatting-header {
+.cm-formatting-heajer {
   color:var(--text-faint) !important;
   font-weight:var(--normal-weight) !important;
 }
